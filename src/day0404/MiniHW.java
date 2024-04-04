@@ -15,8 +15,8 @@ public class MiniHW {
     public static void main(String[] args) {
         Market market = new Market("상점");
 
-        Person p1 = new Person("정정정");
-        Person p2 = new Person("희희희");
+        Person p1 = new Person("가나다");
+        Person p2 = new Person("라마바");
 
         SamsungPhone sp = new SamsungPhone();
         ApplePhone ap = new ApplePhone();
