@@ -33,11 +33,11 @@ public class MiniHW {
     }
 }
 
-class Market{
+class Market {
     String marketName;
     String[] log;
 
-    Market(String marketName){
+    Market(String marketName) {
         this.marketName = marketName;
     }
 
@@ -53,10 +53,10 @@ class Person {
     }
 
     void getVoice() {
-        System.out.println(this.name+":"+this.voice);
+        System.out.println(this.name + ":" + this.voice);
     }
 
-    String getName(){
+    String getName() {
         return this.name;
     }
 
@@ -67,24 +67,27 @@ class Person {
 
 class SmartPhoneType {
     boolean power;
-    void turnOn(){
+
+    void turnOn() {
         this.power = !this.power;
     }
 
-    void ring(){
+    void ring() {
         System.out.println("폰 울림");
     }
 }
-class SamsungPhone extends SmartPhoneType{
-    void ring(){
-        if(this.power){
+
+class SamsungPhone extends SmartPhoneType {
+    void ring() {
+        if (this.power) {
             System.out.println("삐비빅");
         }
     }
 }
-class ApplePhone extends  SmartPhoneType{
-    void ring(){
-        if(this.power){
+
+class ApplePhone extends SmartPhoneType {
+    void ring() {
+        if (this.power) {
             System.out.println("bbeep");
         }
     }
