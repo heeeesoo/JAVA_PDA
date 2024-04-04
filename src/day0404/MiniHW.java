@@ -1,15 +1,15 @@
 package day0404;
 
 // 우리는 상점에서 핸드폰 구매
-// 쏘니는 핸드폰을 샀습니다.
-// 베컴도 핸드폰을 샀습니다.
-// 쏘니가 핸드폰을 켰습니다.
+// 가나다는 핸드폰을 샀습니다.
+// 라마바도 핸드폰을 샀습니다.
+// 가나다가 핸드폰을 켰습니다.
 // "야 나 내 핸드폰 켜볼게"
 // 핸드폰이 켜지면서
-// "삐비빅" 소리 났다
-// 베컴이 "나도 핸드폰 켜볼게"
+// "삐비빅" 소리 출력
+// 라마바이 "나도 핸드폰 켜볼게"
 // 핸드폰이 켜지면서
-// "bbeep"
+// "bbeep" 소리 출력
 
 public class MiniHW {
     public static void main(String[] args) {
@@ -21,13 +21,14 @@ public class MiniHW {
         SamsungPhone sp = new SamsungPhone();
         ApplePhone ap = new ApplePhone();
 
-        p1.setVoice("야 나 내 핸드폰 켜볼게");
-        p1.getVoice();
+        sp.setOwner(p1);
+        ap.setOwner(p2);
+
+        p1.talk("야 나 내 핸드폰 켜볼게");
         sp.turnOn();
         sp.ring();
 
-        p2.setVoice("나도 핸드폰 켜볼게");
-        p2.getVoice();
+        p2.talk("나도 핸드폰 켜볼게");
         ap.turnOn();
         ap.ring();
     }
@@ -35,7 +36,6 @@ public class MiniHW {
 
 class Market {
     String marketName;
-    String[] log;
 
     Market(String marketName) {
         this.marketName = marketName;
@@ -52,21 +52,19 @@ class Person {
         this.name = name;
     }
 
-    void getVoice() {
-        System.out.println(this.name + ":" + this.voice);
+    void talk(String text){
+        System.out.println(this.name+" : "+text);
     }
 
-    String getName() {
+    String getName(){
         return this.name;
     }
 
-    void setVoice(String voice) {
-        this.voice = voice;
-    }
 }
 
 class SmartPhoneType {
     boolean power;
+    Person owner;
 
     void turnOn() {
         this.power = !this.power;
@@ -75,12 +73,16 @@ class SmartPhoneType {
     void ring() {
         System.out.println("폰 울림");
     }
+
+    void setOwner(Person owner){
+        this.owner = owner;
+    }
 }
 
 class SamsungPhone extends SmartPhoneType {
     void ring() {
         if (this.power) {
-            System.out.println("삐비빅");
+            System.out.println(this.owner.getName()+"폰 : 삐비빅");
         }
     }
 }
@@ -88,7 +90,7 @@ class SamsungPhone extends SmartPhoneType {
 class ApplePhone extends SmartPhoneType {
     void ring() {
         if (this.power) {
-            System.out.println("bbeep");
+            System.out.println(this.owner.getName()+"폰 : bbeep");
         }
     }
 }
