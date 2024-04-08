@@ -6,7 +6,7 @@
 3. 회원정보 수정
 4. 탈퇴
 
-#### 객체
+#### 클래스
 1. User <br/>
    a. 필드 : name, email, password <br/>
    b. 메소드 : 
@@ -14,7 +14,7 @@
       - String toString() : User 객체 값 출력
    <br/>
 2. UserRepository <br/>
-   a. 필드 number : map에 넣을 key 값
+   a. 필드 -number : map에 넣을 key 값
      <br/>
    b. 메소드 : <br/>
      - void setUserLogin(User user) : user login true로 바꾸기
@@ -25,6 +25,8 @@
      - void putUser(User user, String name, String email, String password) : 해당 user의 email, password 수정
      - boolean isLogin(User user) : 해당 user 로그인했으면 true 반환, 아니면 false 반환
 
+
+![img.png](img.png)
 
 ---
 
