@@ -28,6 +28,64 @@
 
 ![img.png](img.png)
 
+#### 출력 결과
+```
+기능을 입력해주세요: 1
+입력한 기능: 1
+회원가입
+이름을 입력해주세요: 
+test
+이메일을 입력해주세요: 
+email
+비밀번호를 입력해주세요: 
+pwd
+0: Name: test, Email: email, Password: pwd, Login:false
+기능을 입력해주세요: 2
+입력한 기능: 2
+로그인
+이메일을 입력해주세요: 
+email
+비밀번호를 입력해주세요: 
+pwd
+로그인 성공
+0: Name: test, Email: email, Password: pwd, Login:true
+기능을 입력해주세요: 3
+입력한 기능: 3
+회원정보 수정
+수정하고 싶은 회원의 이메일을 입력해주세요: 
+email
+수정하고 싶은 회원의 비밀번호를 입력해주세요: 
+pwd
+새로운 이름을 입력해주세요: 
+test2
+새로운 이메일을 입력해주세요: 
+email2
+새로운 비밀번호를 입력해주세요: 
+pwd2
+put:0
+0: Name: test2, Email: email2, Password: pwd2, Login:false
+수정 완료 다시 로그인해주세요.
+기능을 입력해주세요: 2
+입력한 기능: 2
+로그인
+이메일을 입력해주세요: 
+email2
+비밀번호를 입력해주세요: 
+pwd2
+로그인 성공
+0: Name: test2, Email: email2, Password: pwd2, Login:true
+기능을 입력해주세요: 4
+입력한 기능: 4
+회원 탈퇴
+이메일을 입력해주세요: 
+email2
+비밀번호를 입력해주세요: 
+pwd2
+탈퇴 성공
+기능을 입력해주세요: 0
+입력한 기능: 0
+```
+
 ---
 
 ### [0404 mini hw](https://github.com/heeeesoo/JAVA_PDA/blob/main/src/day0404/MiniHW.java)
