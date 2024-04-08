@@ -1,5 +1,5 @@
-### [0408 유저](https://github.com/heeeesoo/JAVA_PDA/blob/main/src/day0408/MiniProj.java)
-
+### 0408 유저
+[해당 코드 링크](https://github.com/heeeesoo/JAVA_PDA/blob/main/src/day0408/MiniProj.java) 👈🏻
 #### 구현 과제
 1. 회원가입
 2. 로그인
